@@ -1,0 +1,28 @@
+{
+  "name": "figma-react-plugin",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "npm run build:ui && npm run build:plugin",
+    "build:ui": "vite build",
+    "build:plugin": "vite build --config vite.config.plugin.ts",
+    "watch": "concurrently \"npm run watch:ui\" \"npm run watch:plugin\"",
+    "watch:ui": "vite build --watch",
+    "watch:plugin": "vite build --config vite.config.plugin.ts --watch",
+    "dev": "npm run watch"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.121.0",
+    "@types/react": "^18.3.27",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^4.7.0",
+    "concurrently": "^8.2.2",
+    "typescript": "^5.9.3",
+    "vite": "^5.4.21",
+    "vite-plugin-singlefile": "^2.3.0"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

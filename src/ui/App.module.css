@@ -1,0 +1,87 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 16px;
+}
+
+.header {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.selection {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+.main {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.colorField {
+  margin-bottom: 12px;
+}
+
+.colorLabel {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.colorInput {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.colorPicker {
+  width: 40px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.colorText {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: monospace;
+}
+
+.footer {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--color-border);
+}
+
+.success {
+  color: #22c55e;
+  font-size: 11px;
+  margin-bottom: 8px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
