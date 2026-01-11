@@ -1,20 +1,22 @@
 import { defineConfig } from 'vite';
-import path from 'path';
+import { resolve } from 'path';
 
 export default defineConfig({
   build: {
+    outDir: 'dist',
+    emptyDir: false,
     lib: {
-      entry: path.resolve(__dirname, 'src/plugin/controller.ts'),
-      formats: ['iife'],
-      name: 'plugin',
+      entry: resolve(__dirname, 'src/plugin/controller.ts'),
+      name: 'code',
       fileName: () => 'code.js',
+      formats: ['iife'],
     },
-    outDir: path.resolve(__dirname, 'dist'),
-    emptyOutDir: false,
     rollupOptions: {
       output: {
-        extend: true,
+        entryFileNames: 'code.js',
       },
     },
+    target: 'es2017',  // Important!
+    minify: false,     // Easier to debug
   },
 });

@@ -6,6 +6,6 @@
   "ui": "dist/index.html",
   "editorType": ["figma"],
   "networkAccess": {
-    "allowedDomains": ["none"]
+    "allowedDomains": ["https://api.iconify.design"]
   }
 }
